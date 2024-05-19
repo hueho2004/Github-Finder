@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
@@ -9,7 +8,7 @@ return (
     <Navbar />
     <div className="container">
       <h1>GitHub Users Data</h1>
-    <Search />
+      <Search />
     </div>
   </div>
   );

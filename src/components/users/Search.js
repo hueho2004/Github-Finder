@@ -1,4 +1,3 @@
-// Search.js
 import axios from "axios";
 import React, { useState } from "react";
 import Users from "./Users";
@@ -30,7 +29,7 @@ return (
             <input type="text" name="text" placeholder="Search User" value={text} onChange={onChange}/>
             <input type="submit" value="Search" className="btn btn-success btn-block"/>
         </form>
-        <Users users={users} />
+        <Users users={users}/>
     </div>
     );
 };
