@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import About from "../components/pages/About";
+import About from "../pages/About";
 import NotFound from "../components/pages/NotFound";
 import Search from "../users/Search";
 import User from "../users/User";
