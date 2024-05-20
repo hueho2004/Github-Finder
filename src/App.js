@@ -1,15 +1,20 @@
 import React from "react";
 import "./App.css";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Search from "./components/users/Search";
 const App = () => {
 return (
-  <div className="App">
+    <div className="App">
+    <Router>
     <Navbar />
     <div className="container">
       <h1>GitHub Users Data</h1>
-      <Search />
+      <Switch>
+      <Route exact path="/" component={Search} />
+      </Switch>
     </div>
+    </Router>
   </div>
   );
 };
