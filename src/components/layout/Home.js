@@ -12,7 +12,7 @@ const Home = () => {
         <Route exact path="/" component={Search} />
         <Route exact path="/about" component={About} />
         <Route exact path="/user/:id" component={User} />
-        <Route path="/*" component={NotFound}></Route>
+        <Route path="/*" component={NotFound} />
       </Switch>
     </div>
   );
