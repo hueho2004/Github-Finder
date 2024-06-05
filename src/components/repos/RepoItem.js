@@ -1,16 +1,30 @@
-import React from 'react';
+import React from 'react'
 
-const RepoItem = ({ repo }) => {
+const RepoItem = (props) => {
+    const {name, created_at, is_private} = props.repo;
   return (
-    <div className="card">
-      <h3>
-        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-          {repo.name}
-        </a>
-      </h3>
-      <p>{repo.description}</p>
+    <div className='grid-item'>
+        <div style={styleRepo }>
+            <p style={repoName}>{name}</p>
+            <p>{is_private === true ? <p style={privateRepo}>Private</p> : <p style={privateRepo}>Public</p>}</p>
+        </div>
+      <p>{created_at}</p>
     </div>
-  );
-};
-
-export default RepoItem;
+  )
+}
+const styleRepo = {
+    display: "flex",
+    justifyContent: "space-between"
+}
+const repoName = {
+    fontSize: "20px",
+    color: "blue",
+}
+const privateRepo = {
+    borderRadius: "5px",
+    border: "1px solid black",
+    padding: "1px",
+    width: "70px",
+    textAlign:"center"
+}
+export default RepoItem
