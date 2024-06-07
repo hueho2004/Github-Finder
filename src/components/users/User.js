@@ -14,7 +14,6 @@ const User = () => {
       console.error("Error fetching data: ", error.message);
     }
   };
-
   const getUserRepos = async (username) =>  {
     try{
       const repos = await getUserReposApi(username);
@@ -23,12 +22,10 @@ const User = () => {
       console.error("Error fetching data: ", error.message);
     }
   }
-
   useEffect(() => {
     getUser(id); 
     getUserRepos(id);
   }, [id]);
-
   const {
     name,
     avatar_url,
@@ -80,7 +77,7 @@ const User = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-      Show Github Profile
+      Show Github Profile of user
       </a>
       <ul>
         <li>

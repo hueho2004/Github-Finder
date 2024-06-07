@@ -27,7 +27,6 @@ const Search = () => {
   const onChange = (e) => {
     setText(e.target.value); 
   };
-
   return (
     <div>
       <form onSubmit={onSubmit} className="form">
@@ -55,5 +54,4 @@ const Search = () => {
     </div>
   );
 };
-
 export default Search;
